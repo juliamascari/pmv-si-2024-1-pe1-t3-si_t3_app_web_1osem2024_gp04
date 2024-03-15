@@ -46,46 +46,31 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|ID|Descrição do Requisito|Prioridade|
+|---|---|---|
+|RF-001|Permitir que o administrador cadastre vagas disponíveis|ALTA|
+|RF-002|Permitir que os funcionários visualizem vagas disponíveis|ALTA|
+|RF-003|Permitir que os funcionários reservem uma vaga|ALTA|
+|RF-004|Permitir que o administrador visualize reservas atuais|MÉDIA|
+|RF-005|Permitir que o administrador cancele reservas|MÉDIA|
+|RF-006|Emitir uma lista de espera para vagas que estão cheias|BAIXA|
 
+### Requisitos Não Funcionais
 
-### Requisitos não Funcionais
-
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|ID|Descrição do Requisito|Prioridade|
+|---|---|---|
+|RNF-001|A interface deve ser responsiva e compatível com dispositivos móveis|ALTA|
+|RNF-002|O sistema deve ser capaz de atualizar as informações de vaga em tempo real|MÉDIA|
+|RNF-003|O sistema deve ser simples e intuitivo para garantir facilidade de uso|ALTA|
+|RNF-004|As operações de reserva e cancelamento devem ser processadas em menos de 2 segundos|ALTA|
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|ID|Restrição|
+|---|---|
+|01|O projeto deve ser implementado utilizando apenas JavaScript, CSS e HTML|
+|02|O sistema deve funcionar sem um backend ou banco de dados|
+|03|O projeto deve ser concluído e entregue até o final do semestre
 
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
