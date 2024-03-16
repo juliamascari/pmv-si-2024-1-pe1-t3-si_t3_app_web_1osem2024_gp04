@@ -16,12 +16,8 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O sistema tem como objetivo auxiliar trabalhadores de empresas que atuam por meio do modelo híbrido à organizarem suas reuniões presenciais.
+Através de uma agenda compartilhada e acessada por todos os funcionários da equipe, podendo selecionar a sala e horário disponíveis para marcar sua reunião presencial com todos os integrantes.
 
 ## Justificativa
 
@@ -34,13 +30,4 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Um estudo do Google Workspace, feito em parceria com a consultoria IDC Brasil em 2022 [1], apontou que o modelo de trabalho híbrido, que permite aos funcionários realizem suas funções de forma remota e presencial, foi adotado por mais de 56% das empresas. Sendo assim, o público alvo do sistema é composto exatamente por esses estabelecimentos e seus funcionários, pensando na organização e bem estar de uma porcentagem que cresce cada vez mais.
