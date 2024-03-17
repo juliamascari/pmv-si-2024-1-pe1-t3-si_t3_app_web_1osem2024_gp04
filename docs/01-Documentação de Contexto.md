@@ -3,11 +3,9 @@
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+Com a crise pandêmica, pelo vírus SARS-CoV-2, houve uma crescente adoção do trabalho remoto e do modelo híbrido de trabalho, e isso acarretou em alguns problemas, pois algumas empresas passaram a enfrentar o desafio de gerenciar eficientemente seus espaços de trabalho físicos.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Os funcionários que optam por trabalhar no escritório em determinados dias podem encontrar dificuldades para localizar um espaço de trabalho adequado, levando a uma perda de tempo e produtividade. Além disso, a falta de um sistema de gerenciamento eficaz pode resultar em espaços de trabalho subutilizados ou superlotados, afetando a satisfação dos funcionários e a eficiência operacional.
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -21,13 +19,17 @@ Através de uma agenda compartilhada e acessada por todos os funcionários da eq
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A motivação para desenvolver esta aplicação de reserva de local de trabalho surge da necessidade crescente de flexibilidade e eficiência no ambiente de trabalho moderno. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Com a pandemia ocasionada pelo SARS-CoV-2 ocorreu a adoção cada vez maior do trabalho remoto e posteriormente as vacinas, do modelo híbrido, uma alternativa que foi considerada pelas organizações muito promissora (Oliveira, 2021). 
+
+Com isso tornou-se essencial para as empresas gerenciar seus espaços de trabalho físicos de maneira eficaz, para os dias de trabalho presencial.
+
+A escolha de uma aplicação web de agendamento de vagas em escritório, é impulsionada pelo desejo de resolver um problema real enfrentado por muitas organizações hoje em dia, além de ser uma estratégia simples, que traze benefícios significativos, tanto para a empresa quanto para os funcionários. Sendo que para a empresa, pode resultar em uma melhor utilização dos recursos e maior eficiência operacional além da redução de custos com manutenções no escritório e para os funcionários, pode levar a uma melhor experiência de trabalho, organização e uma maior satisfação no trabalho.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
-
+    
 Um estudo do Google Workspace, feito em parceria com a consultoria IDC Brasil em 2022 [1], apontou que o modelo de trabalho híbrido, que permite aos funcionários realizem suas funções de forma remota e presencial, foi adotado por mais de 56% das empresas. Sendo assim, o público alvo do sistema é composto exatamente por esses estabelecimentos e seus funcionários, pensando na organização e bem estar de uma porcentagem que cresce cada vez mais.
