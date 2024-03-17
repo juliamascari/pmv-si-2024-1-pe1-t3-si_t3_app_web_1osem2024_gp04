@@ -1,23 +1,24 @@
-# TÍTULO DO PROJETO
+# Sistema de agendamento de vagas em escritório
 
-`CURSO`
+`Sistemas da informação`
 
-`DISCIPLINA`
+`Aplicações Web`
 
-`SEMESTRE`
+`1° SEMESTRE` 
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Está sendo desenvolvido uma aplicação web com o objetivo de realizar agendamento e gerenciamento de vagas em escritório. Este projeto tem como foco facilitar e otimizar os espações físicos de uma empresa que possui modelo híbrido de trabalho.
 
 ## Integrantes
 
 * Nome completo do aluno 1
 * Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Júlia Persson Mascari
+* Luanna Gyovana Rodrigues da Silva
+* Renan Ribeiro Lage
 
 ## Orientador
 
-* Nome completo do professor 1
+* Nesley Jesus Daher de Oliveira
 
 ## Instruções de utilização
 
