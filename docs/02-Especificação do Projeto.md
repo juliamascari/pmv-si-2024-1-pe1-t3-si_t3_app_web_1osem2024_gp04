@@ -1,44 +1,51 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+O sistema tem como objetivo oferecer uma solução completa para a reserva e gestão de espaços de trabalho em ambientes corporativos, visando facilitar a transição para modelos de trabalho presenciais, flexíveis e híbridos, permitindo aos colaboradores reservar estações de trabalho e salas de reuniões conforme necessário, enquanto permite que os gestores tenham ferramentas que otimizem o uso do espaço e gerenciem as preferências dos funcionários. Para isso o sistema contará com as seguintes ferramentas:
+- Interface intuitiva para reserva e gestão de espaços de trabalho.
+- Integração com Calendário Corporativo permitindo aos usuários visualizar e reservar espaços com base em suas agendas.
+- Lembretes e avisos de inicio e fim da reserva realizada. Podendo ser realizado agendamentos semanais e quinzenais.
+- Visualização clara do espaço a ser reservado, mapeando andar, corredor, número da mesa, horário e dia da reserva.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+|                                                                                                                                                                                       | <h2>Larissa Torres                                                                                                                                                                                                            |                                                                                                           |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+|                                                                                                                                                                                       | <strong>Idade:</strong> 34 anos.                                                                                                                                                                                                                |                                                                                                           |
+| <img width=250px heigth=250px src="">| <strong>Ocupação:</strong>  <li> Product Owner <li> Atua como procuradora do cliente, responsável por trabalhar com gerenciamento de produto em uma empresa de tecnologia.                                                                                                                                      
+| <strong>Motivações                                                                                                                                                                            | <strong>Frustrações                                                                                                                                                                                                                    | <strong>Hobbies, História:                                                                                        |
+| <li> Deseja um sistema que possibilite uma alocação eficiente dos espaços de trabalho para maximizar a utilização do escritório e facilitar a adaptação a modelos de trabalho híbridos.                              | <li>Dificuldades em gerenciar a ocupação dos espaços de forma flexível e responder rapidamente às mudanças nas necessidades de espaço. | <li>Ambientalista <li>Entusiasta de metodologias ágeis, gosta de participar de meetups e conferências sobre gestão de produtos. |
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+
+
+
+
+|                                                                                                                                                                                       | <h2>Abilio Junior |                                                                                                           |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+|                                                                                                                                                                                       | <strong>Idade:</strong> 42 anos.                                                                                                                                                                                                                |                                                                                                           |
+| <img width=250px heigth=250px src="">| <strong>Ocupação:</strong>  <li>Desenvolvedora Full Stack <li>Sênior em uma Multinacional do ramo têxtil.                                                                                                                                      
+| <strong>Motivações                                                                                                                                                                            | <strong>Frustrações                                                                                                                                                                                                                    | <strong>Hobbies, História:                                                                                        |
+| <li>Procurar soluções inovadoras e eficientes para implementar os requisitos, com o uso de tecnologias modernas. | <li>Requisitos mal definidos, mudanças frequentes de escopo, falta de documentação técnica adequada. | <li>Apaixonado por codificação, contribui para projetos open source e está sempre em busca de aprender novas linguagens de programação. |
+
+    
+|                                                                                                                                                                                       | <h2>Lucas Andrade |                                                                                                           |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+|                                                                                                                                                                                       | <strong>Idade:</strong> 25 anos.                                                                                                                                                                                                                |                                                                                                           |
+| <img width=250px heigth=250px src="">| <strong>Ocupação:</strong>  <li>Analista de Qualidade (QA). <li>Acompanha desde o esboço do projeto, passando pela programação, até as implementações d| 
+| <strong>Motivações                                                                                                                                                                            | <strong>Frustrações                                                                                                                                                                                                                    | <strong>Hobbies, História:                                                                                        |
+| <li>Assegurar que o sistema seja confiável, fácil de usar e livre de erros, proporcionando uma experiência positiva para os usuários. | <li>Falta de comunicação clara entre a equipe, descoberta de erros em fases avançadas do desenvolvimento. | <li>Interessado por automação de testes, mantém um blog onde compartilha dicas sobre qualidade de software.
+
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Partindo das informações que as Personas apresentaram, chegou-se à conclusão das seguintes histórias de usuário relevantes ao problema identificado.
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|Larissa Torres  | Quero poder visualizar a disponibilidade dos espaços de trabalho em tempo real e as reservas feitas pela minha equipe para melhor gerenciamento e otimização do dia a dia. | Uso frequente, visto que vou ao escritório 3x por semana.           |
+|Abilio Junior  | Quero poder ter controle dos locais agendados por mim, além de poder  escolher com antecedência os melhores lugares.           | Para poder organizar minha rotina de trabalho e horários.              |               |
+|Raquel Campos  | Ter maior credibilidade nas informações publicadas sobre uma empresa e avaliações reais de funcionários, tudo em um mesmo ambiente de internet.         | Dedicar-se e engajar-se a longo prazo com um plano de carreira em uma empresa sólida e coerente com os valores sociais e ambientais.               |
+|Lucas Andrade | Quero conciliar as estações agendadas com a minha agenda para estar perto do time que atuarei naquela semana.  | Garantir alinhamento entre desenvolvimento e testes das equipes e poder conciliar as prioridades da semana  |
 
 ## Requisitos
 
