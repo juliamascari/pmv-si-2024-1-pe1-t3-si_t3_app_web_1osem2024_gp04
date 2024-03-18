@@ -10,8 +10,8 @@ Está sendo desenvolvido uma aplicação web com o objetivo de realizar agendame
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
+* Amanda Vitoria Garcia
+* Jhonatan Felipe do Nascimento
 * Júlia Persson Mascari
 * Luanna Gyovana Rodrigues da Silva
 * Renan Ribeiro Lage
