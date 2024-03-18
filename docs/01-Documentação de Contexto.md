@@ -1,6 +1,7 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Com a chegada da pandemia de Covid-19 houveram grandes impactos sobre o mercado de trabalho no Brasil e no mundo, resultando na adoção em massa de medidas de saúde pública, incluindo a obrigatoriedade do home office a fim de reduzir a transmissão do vírus e trazer mais segurança aos colaboradores. No entanto, com o progresso da vacinação e a diminuição do número de casos, começamos a ver também o retorno ao modelo presencial, trazendo desafios, adaptações e mudanças para todos. Com esse retorno foi necessário que as empresas repensassem as necessidades de seus espaços de trabalho, como são alocados e gerenciados, para atender à demanda por maior flexibilidade, eficiência e adaptação à nova dinâmica da volta aos escritórios. Nosso projeto propõe o desenvolvimento de uma solução inovadora de gerenciamento de vagas em escritório que visa otimizar a utilização do espaço, melhorar a experiência dos funcionários e atender às novas necessidades das organizações. Através de tecnologia avançada, nosso sistema busca mudar a forma como as empresas organizam e utilizam seus ambientes de trabalho.
+
 
 ## Problema
 Com a crise pandêmica, pelo vírus SARS-CoV-2, houve uma crescente adoção do trabalho remoto e do modelo híbrido de trabalho, e isso acarretou em alguns problemas, pois algumas empresas passaram a enfrentar o desafio de gerenciar eficientemente seus espaços de trabalho físicos.
