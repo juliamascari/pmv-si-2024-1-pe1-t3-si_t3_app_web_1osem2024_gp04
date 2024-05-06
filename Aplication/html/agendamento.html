@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="agendamento.css" />
+    <title>Agendamento</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Logotipo e nome da empresa -->
+      <div class="logo">
+        <h1>🏢</h1>
+        <p>Empresa X</p>
+      </div>
+      <!-- Barra de pesquisa -->
+      <div class="search-container">
+        <input type="text" placeholder="Buscar..." id="search-input" />
+        <button onclick="">🔍</button>
+      </div>
+    </header>
+
+    <div class="menu">
+      <!-- Menu lateral -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Agendamentos</a></li>
+        <li><a href="#">Reservas</a></li>
+      </ul>
+    </div>
+    <title>Formulário de Agendamento</title>
+    <style>
+      .container {
+        width: flex;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      select,
+      input[type="submit"] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulário de Agendamento</h1>
+      <form>
+        <label for="cidade">Cidade:</label>
+        <select id="cidade">
+          <option value="">-- Selecione --</option>
+          <option value="cidade1">Cidade 1</option>
+          <option value="cidade2">Cidade 2</option>
+          <option value="cidade3">Cidade 3</option>
+        </select>
+
+        <label for="predio">Prédio:</label>
+        <select id="predio">
+          <option value="">-- Selecione --</option>
+          <option value="predio1">Prédio 1</option>
+          <option value="predio2">Prédio 2</option>
+          <option value="predio3">Prédio 3</option>
+        </select>
+
+        <label for="andar">Andar:</label>
+        <select id="andar">
+          <option value="">-- Selecione --</option>
+          <option value="andar1">Andar 1</option>
+          <option value="andar2">Andar 2</option>
+          <option value="andar3">Andar 3</option>
+        </select>
+
+        <label for="area">Área:</label>
+        <select id="area">
+          <option value="">-- Selecione --</option>
+          <option value="area1">Área 1</option>
+          <option value="area2">Área 2</option>
+          <option value="area3">Área 3</option>
+        </select>
+
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+
+      <div class="container" id="reserva-info">
+        <h2>Informações da Reserva</h2>
+        <label for="dia-escolhido">Dia escolhido:</label>
+        <input type="date" id="dia-escolhido" />
+
+        <label for="ocupacao">Ocupação:</label>
+        <select id="ocupacao">
+          <option value="">-- Selecione --</option>
+          <option value="ocupacao1">Ocupação 1</option>
+          <option value="ocupacao2">Ocupação 2</option>
+          <option value="ocupacao3">Ocupação 3</option>
+        </select>
+      </div>
+
+      <div class="container" id="calendar">
+        <h2>CALENDÁRIO</h2>
+        <div id="calendario"></div>
+        <label>
+          <input type="radio" name="calendar-view" value="full-day" /> FULL DAY
+        </label>
+        <label>
+          <input type="radio" name="calendar-view" value="morning" /> MORNING
+        </label>
+        <label>
+          <input type="radio" name="calendar-view" value="afternoon" />
+          AFTERNOON
+        </label>
+        <button id="reset-calendar">Resetar</button>
+      </div>
+    </div>
+
+    <script>
+      // reserva - JavaScript
+      const form = document.querySelector("form");
+      const reservaInfo = document.querySelector("#reserva-info");
+      const calendar = document.querySelector("#calendar");
+      const calendarioDiv = document.querySelector("#calendario");
+
+      // submit
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // infromacao de reserva e calendario
+        reservaInfo.style.display = "block";
+        calendar.style.display = "block";
+      });
+
+      // Reset calendar view
+      document
+        .querySelector("#reset-calendar")
+        .addEventListener("click", () => {
+          // adicionar reset do calendario
+        });
+
+      // Função para criar o calendário
+      function criarCalendario() {
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const daysInMonth = new Date(year, month, 0).getDate();
+
+        let calendarHTML = "<table>";
+        calendarHTML +=
+          "<tr><th>Domingo</th><th>Segunda</th><th>Terça</th><th>Quarta</th><th>Quinta</th><th>Sexta</th><th>Sábado</th></tr>";
+
+        let dayOfMonth = 1;
+        for (let i = 0; i < 6; i++) {
+          calendarHTML += "<tr>";
+          for (let j = 0; j < 7; j++) {
+            if (dayOfMonth <= daysInMonth) {
+              calendarHTML += `<td>${dayOfMonth}</td>`;
+              dayOfMonth++;
+            } else {
+              calendarHTML += "<td></td>";
+            }
+          }
+          calendarHTML += "</tr>";
+        }
+
+        calendarHTML += "</table>";
+        calendarioDiv.innerHTML = calendarHTML;
+      }
+
+      // Chamar a função para criar o calendário
+      criarCalendario();
+    </script>
+  </body>
+</html>
