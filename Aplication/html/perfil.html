@@ -4,33 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> agendamento </title>
-    <link rel="stylesheet" type="text/css" href="../css/perfil.css">
+    <title> Meu perfil </title>
+    <link rel="stylesheet" type="text/css" href="../perfil.css/perfil.css">
+    <script type="text/javascript" src="../perfil.js/perfil.js"> </script>
 </head>
 
 
 <body>
     <div class=side-menu>
-        <img src=" " alt="logo">
 
-                  <img src="../profile_menu_icon_149887.png" alt="profile">
-    
+        <img src="../img_perfil/Escritório eficiente (1).png" alt="logo" id="logo">
+
+        <div id="perfil">
+            <img src="../img_perfil/profile_menu_icon_149887.png" alt="Imagem do perfil">
+
+            <label class="foto">
+                <input type="file" accept="Image/*" id="upload">
+                <span class="picture_img"> Enviar foto</span>
+            </label>
         
-        <nav class="sair"> Sair </nav>
-    </div>
-
-    <div class=content>
 
 
-        <div class="result">
-            <p>Alterar email</p>
-            <p>Alterar telefone</p>
-            <p>Alterar idioma</p>
-            <p>Alterar celular</p>
         </div>
 
+        <nav class="sair"> 
+            <a href="login.html" id="login">Sair</a>
+        </nav >
+    </div>
+
+
+    <div class=content>
+        <button id="editar">Editar perfil</button>
+
+        <form action="formulario">
+
+            <label for="name"> Nome</label>
+            <input type="name" id="nome" placeholder="Alterar nome" disabled>
+            <label for="email"> E-mail</label>
+            <input type="email" id="email" placeholder="Alterar email" disabled>
+            <label for="tel">telefone</label>
+            <input type="tel" id="telefone" placeholder="Alterar telefone" maxlength="11" disabled>
+            <label for="password">Senha</label>
+            <input type="password" id="senha" placeholder="Alterar senha" maxlength="10" minlength="6" disabled>
+            <label for="lang">Idioma</label>
+            <select name="languages" id="lang">
+                <option value="pt">Português</option>
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+            </select>
+            <button type="submit" id="salvar" disabled>Salvar</button>
+
+        </form>
 
 
 </body>
+
 
 </html>
