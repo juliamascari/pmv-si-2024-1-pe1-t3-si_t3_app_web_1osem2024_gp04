@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
 }
 
 body {
@@ -15,69 +15,140 @@ body {
     margin: 10px 0 10px 0;
     width: calc(20vw);
     height: calc(100vh - 20px);
-    background-color: rgb(185, 185, 185);
+    background-color: #3A75D6;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
-.logo {
-    height: 10px;
-    width: 10px;
-    margin: 0 0 0 10%;
+#upload{
+    display: none;
 }
 
 
+.foto{
+  
+margin-left: 75px;
+ color: white;
+ font-weight: 550;
+
+
+}
+
+.foto :hover{
+    background-color: #9ECBF2;
+    border-radius: 5px 5px 5px 5px;
+    color: black;
+
+}
 
 .content {
     border-radius: 10px;
     margin: 10px;
     width: calc(80vw);
     height: calc(100vh - 20px);
-    background-color: rgb(185, 185, 185);
+    background-color: #EBEDF3;
 
 }
 
+#perfil {
+   margin-bottom: 40%;
+   margin-left: 15%;
+}
 
+#logo {
+    margin-top: 2%;
+}
 
 .sair {
     margin-left: 0%;
     text-align: left;
     border: none;
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: 550;
     color: white;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
     margin-left: 5%;
+
 
 }
 
+#editar {
+    margin-left: 10vh;
+    width: 20vh;
+    border: none;
+    color: white;
+    padding: 10px;
+    background-color: #3A75D6;
+    border-radius: 15px;
+    position: fixed;
+   margin-left:5%;
+    bottom: 30px;
+}
+
+#salvar {
+    margin-left: 10vh;
+    width: 20vh;
+    border: none;
+    color: white;
+    padding: 10px;
+    background-color: #3A75D6;
+    border-radius: 15px;
+    position: fixed;
+    margin-left:60%;
+    bottom: 30px;
+}
+
+#editar:hover {
+    background-color: #9ECBF2;
+    color: black;
+    
+}
+
+#salvar:hover {
+    background-color: #9ECBF2;
+    color: black;
+}
 
 
 .sair:hover {
-    background-color: white;
+    background-color: #9ECBF2;
     border-radius: 0 15px 15px 0;
-    color: black
+}
+
+#login:hover {
+    color: black;
 }
 
 
-p {
-    color: white;
-    font-size: 30px;
-    text-align: center;
-   
+label {
+    margin-top: 20px;
+    color: black;
+
 }
 
+input {
+    padding: 1vh;
+    
 
-.result p{
-    margin-bottom: 10vh;
+}
+
+select {
+    padding: 1vh;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
     margin-top: 6%;
     border-radius: 15px;
-    background-color: rgba(24, 23, 23, 0.452);
-    padding: 20px;
+    padding: 50px;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-   
-   
+}
+
+#login{
+        text-decoration: none;
+       color:white;
 }
