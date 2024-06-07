@@ -14,7 +14,7 @@ Fonte utilizada: sans-serif;
 
 **Logo**:
 
-![Logo](https://github.com/juliamascari/pmv-si-2024-1-pe1-t3-si_t3_app_web_1osem2024_gp04/blob/main/Img.template/LOGO.png?raw=true)
+![Logo](https://github.com/juliamascari/pmv-si-2024-1-pe1-t3-si_t3_app_web_1osem2024_gp04/blob/main/Img.template/Logo.png?raw=true)
 
 
 **Imagens utilizadas**:
