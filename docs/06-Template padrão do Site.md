@@ -54,4 +54,4 @@ Navigation menu      /    Content
 ![Perfil](https://github.com/juliamascari/pmv-si-2024-1-pe1-t3-si_t3_app_web_1osem2024_gp04/blob/main/Img.template/PERFIL.1.png?raw=true)
 
 **Funcionamento das páginas**
-Link vídeo:[video template](https://www.youtube.com/watch?v=G6xjwmz6u8I)
+Link vídeo:[video template](https://www.youtube.com/watch?v=qhGk9Pjq8v4)
