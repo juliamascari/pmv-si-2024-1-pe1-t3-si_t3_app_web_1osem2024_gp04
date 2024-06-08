@@ -4,31 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <title>Página de Login</title>
+    <title>Login - OpenSchedule</title>
 </head>
 
 <body>
     <div class="container">
+        <img class= "login-img" src="img/login.png" alt="imagem login">
         <div class="login">
-            <h1>Fazer Login</h1>
-        
-        <div class="input-group">
-                <div class="input-box">
-                    <label for="email">Digite seu e-mail:</label>
-                    <input type="text" id="email" name="email">
-                </div>
-                <div class="input-box">
-                    <label for="password">Digite sua senha:</label>
-                    <input type="password" id="password" name="password">
-                </div>
-            <button><a href="">Entrar</a></button>
-        </div>
-        <div class="cadastro">
-            <h2>Não tem conta?</h2>
-            <button><a href="cadastro.html">Se Cadastrar</a></button>
+            <div class="titulo">
+                <h1>Fazer Login</h1>
+            </div>
+                <a href="home.html">
+                    <div class="selo"></div>
+                </a>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label id="email-label" for="email">E-mail:</label>
+                        <input type="text" id="email" name="email" placeholder="Digite seu e-mail...">
+                    </div>
+                    <div class="input-box">
+                        <label id="password-label" for="password">Senha:</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha...">
+                    </div>
+                    <button onclick="validarLogin()">Entrar</button>
+                </div>    
+            <div class="cadastro">
+                <h2>Não tem conta ainda?</h2>
+                <button><a href="cadastro.html">Se Cadastrar</a></button>
+            </div>
         </div>
     </div>
 
-</body>
+    <script>
+        function validarLogin () {
+            var emailLabel = document.getElementById('email-label');
+            var email = document.getElementById('email').value;
+            var passwordLabel = document.getElementById('password-label');
+            var password = document.getElementById('password').value;
+            
+            if (email.trim() === '' || password.trim() === '') {
+                    emailLabel.textContent = 'E-mail:';
+                    passwordLabel.textContent = 'Senha:';
+                    alert('Por favor, preencha todos os campos.');
+                    return;
 
+            }
+            
+                    var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+                if (!usuariosCadastrados.includes(email)) {
+                    alert('Usúario não encontrado. Faça seu cadastro!')
+                    return;
+                }
+    
+                var senhaSalva = localStorage.getItem(email);
+    
+                if (password === senhaSalva) {
+                    emailLabel.textContent = 'E-mail:';
+                    passwordLabel.textContent = 'Senha:';
+                    alert('Login bem-sucedido!');
+    
+                } else {
+                    alert('Email ou senha incorretos. Tente novamente!')
+                }
+            }
+        </script>
+
+</body>
 </html>
