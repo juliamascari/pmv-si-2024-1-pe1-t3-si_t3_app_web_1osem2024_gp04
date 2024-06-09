@@ -9,6 +9,6 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## User Flow
 
-<img src="/img/OpenSchedule-telas.png">
+<img src="Img.template/telas.png">
 
 
