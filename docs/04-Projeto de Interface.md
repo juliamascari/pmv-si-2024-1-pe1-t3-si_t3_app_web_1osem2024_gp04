@@ -9,6 +9,6 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## User Flow
 
-(docs/img/OpenSchedule-telas.pdf)
+(/img/OpenSchedule-telas.pdf)
 
 
