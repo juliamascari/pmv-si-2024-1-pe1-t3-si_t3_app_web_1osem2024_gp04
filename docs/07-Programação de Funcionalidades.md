@@ -53,4 +53,27 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
 **Caso uma dessas opções ocorra, é apresentado um ALERT e o usúario precisa seguir a orientação. Caso o contrário, o Login é válidado e ele segue para a página da Home**
 
+### Página de Perfil
+
+|ID    | Descrição | Prioridade | Artefato Criado |
+|------|------------------------|------------|-----------------|
+| name | Armazenar o nome do usúario | ALTA | input |
+| email | Armazenar o email do usúario | ALTA | input |
+| tel | Armazenar o celular do usúario | MÉDIA | input |
+| password | Armazenar a senha do usúario | ALTA | input |
+| foto | Armazenar foto de perfil | média | input |
+| editar | Desabilitar campos| ALTA|| button |
+| salvar | Armazenar dados alterados| ALTA | button |
+| sair | Redirecionar para página agendamento | ALTA | nav |
+
+
+**Requisitos para validação:**
+
+- O usúario precisa preencher todos os cinco campos e clicar em "Salvar";
+- A senha deve ter no mínimo 8 caracteres;
+- O email precisa ter o caracter @;
+
+**Caso a senha e o email não cumprir os requisitos, é apresentado um ALERT e o usúario precisa seguir a orientação. Caso o contrário, o Cadastro pode ser salvo**
+
+
 
