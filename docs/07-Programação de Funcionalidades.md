@@ -15,11 +15,9 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 > - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
 >
 
-#Páginas:
-
 ### Página de Cadastro
 
-|ID    | Descrição do Requisito | Prioridade | Artefato Criado |
+|ID    | Descrição | Prioridade | Artefato Criado |
 |------|------------------------|------------|-----------------|
 | name | Armazenar o nome do usúario | ALTA | input-box |
 | email | Armazenar o email do usúario | ALTA | input-box |
@@ -29,12 +27,30 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 |----| Validar dados e cadastrar usúario | ALTA | "cadastrarUsuario()" |
 |----| Direcionar para página de Login caso já seja cadastrado | ALTA | div "login" |
 
+**Requisitos para validação:**
+
+- O usúario precisa preencher todos os cinco campos e clicar em "Se Cadastrar";
+- A senha deve ter no mínimo 8 caracteres;
+- O email não pode ter sido usado anteriormente;
+
+**Caso uma dessas opções ocorra, é apresentado um ALERT e o usúario precisa seguir a orientação. Caso o contrário, o Cadastro é válidado e ele segue para a página da Home**
+
 
 ### Página de Login
 
-|ID    | Descrição do Requisito | Prioridade | Artefato Criado |
+|ID    | Descrição | Prioridade | Artefato Criado |
 |------|------------------------|------------|-----------------|
 | email | Validar o email do usúario | ALTA | input-box |
 | password | Validar a senha do usúario | ALTA | input-box |
 |----| Validar se dados já estão cadastrados e fazer Login | ALTA | "validarLogin()" |
 |----| Direcionar para página de Cadastro caso usúario não seja cadastrado | ALTA | div "cadastro" |
+
+**Requisitos para validação:**
+
+  - O usúario precisa preencher os dois campos e clicar em "Entrar";
+  - O usúario precisa já estar cadastrado anteriornente (na página de login);
+  - Os campos precisam estar preenchidos corretamente, com os respectivos email e senha;
+
+**Caso uma dessas opções ocorra, é apresentado um ALERT e o usúario precisa seguir a orientação. Caso o contrário, o Login é válidado e ele segue para a página da Home**
+
+
