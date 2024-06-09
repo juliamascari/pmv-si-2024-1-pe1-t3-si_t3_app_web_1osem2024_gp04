@@ -9,7 +9,7 @@
 
 <body>
     <div class="container">
-        <img class= "login-img" src="img/login.png" alt="imagem login">
+        <img class= "login-img" src="img/login.jpg" alt="imagem login">
         <div class="login">
             <div class="titulo">
                 <h1>Fazer Login</h1>
@@ -38,9 +38,9 @@
     <script>
         function validarLogin () {
             var emailLabel = document.getElementById('email-label');
-            var email = document.getElementById('email').value;
+            var email = document.getElementById('email').value.trim().toLowerCase();
             var passwordLabel = document.getElementById('password-label');
-            var password = document.getElementById('password').value;
+            var password = document.getElementById('password').value.trim();
             
             if (email.trim() === '' || password.trim() === '') {
                     emailLabel.textContent = 'E-mail:';
@@ -50,24 +50,25 @@
 
             }
             
-                    var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
-                if (!usuariosCadastrados.includes(email)) {
-                    alert('Usúario não encontrado. Faça seu cadastro!')
-                    return;
-                }
-    
-                var senhaSalva = localStorage.getItem(email);
-    
-                if (password === senhaSalva) {
-                    emailLabel.textContent = 'E-mail:';
-                    passwordLabel.textContent = 'Senha:';
-                    alert('Login bem-sucedido!');
-    
-                } else {
-                    alert('Email ou senha incorretos. Tente novamente!')
-                }
+            var usuariosCadastrados = JSON.parse(localStorage.getItem('users')) || [];
+            
+            var usuarioEncontrado = usuariosCadastrados.find(usuario => usuario.email === email);
+            
+            if (!usuarioEncontrado) {
+                alert('Usuário não encontrado. Faça seu cadastro!');
+                return;
             }
-        </script>
+    
+            if (usuarioEncontrado.password === password) {
+                emailLabel.textContent = 'E-mail:';
+                passwordLabel.textContent = 'Senha:';
+                alert('Login realizado com sucesso!');
+                window.location.href = 'cadastro.html'
+            } else {
+                alert('Email ou senha incorretos. Tente novamente!');
+            }
+        }
+    </script>
 
 </body>
 </html>
