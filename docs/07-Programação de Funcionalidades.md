@@ -13,3 +13,28 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 > - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
 > - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
 > - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+>
+
+#Páginas:
+
+### Página de Cadastro
+
+|ID    | Descrição do Requisito | Prioridade | Artefato Criado |
+|------|------------------------|------------|-----------------|
+| name | Armazenar o nome do usúario | ALTA | input-box |
+| email | Armazenar o email do usúario | ALTA | input-box |
+| cel | Armazenar o celular do usúario | MÉDIA | input-box |
+| password | Armazenar a senha do usúario | ALTA | input-box |
+| empresa | Armazenar a empresa do usúario | ALTA | input-box |
+|----| Validar dados e cadastrar usúario | ALTA | "cadastrarUsuario()" |
+|----| Direcionar para página de Login caso já seja cadastrado | ALTA | div "login" |
+
+
+### Página de Login
+
+|ID    | Descrição do Requisito | Prioridade | Artefato Criado |
+|------|------------------------|------------|-----------------|
+| email | Validar o email do usúario | ALTA | input-box |
+| password | Validar a senha do usúario | ALTA | input-box |
+|----| Validar se dados já estão cadastrados e fazer Login | ALTA | "validarLogin()" |
+|----| Direcionar para página de Cadastro caso usúario não seja cadastrado | ALTA | div "cadastro" |
