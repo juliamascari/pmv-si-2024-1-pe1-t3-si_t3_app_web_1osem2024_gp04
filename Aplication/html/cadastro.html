@@ -4,45 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastro.css">
-    <title>Página de cadastro</title>
+    <title>Cadastro - OpenSchedule</title>
 </head>
-
 <body>
     <div class="container">
+        <img class= "cadastro-img" src="img/cadastro.jpg" alt="imagem login">
         <div class="cadastro">
-            <h1>Fazer Cadastro</h1>
-        
-        <div class="input-group">
-                <div class="input-box">
-                    <label for="name">Digite seu nome completo:</label>
-                    <input type="text" id="name" name="name">
-                </div>
-                <div class="input-box">
-                    <label for="email">Digite seu e-mail:</label>
-                    <input type="text" id="email" name="email">
-                </div>
-                <div class="input-box">
-                    <label for="cel">Digite seu celular:</label>
-                    <input type="text" id="cel" name="cel">
-                </div>
-                <div class="input-box">
-                    <label for="empresa">Digite o nome da sua empresa:</label>
-                    <input type="text" id="empresa" name="empresa">
-                </div>
-                <div class="input-box">
-                    <label for="setor">Digite o seu setor na empresa:</label>
-                    <input type="text" id="setor" name="setor">
-                </div>
-        </div>
-            <div class="cadastrar">
-                <button><a href="">Se Cadastrar</a></button>
+            <div class="titulo">
+                <h1>Fazer Cadastro</h1>
             </div>
-        <div class="login">
-            <h2>Já tem conta?</h2>
-            <button><a href="login.html">Fazer login</a></button>
+                <a href="home.html">
+                    <div class="selo"></div>
+                </a>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome completo...">
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail:</label>
+                        <input type="text" id="email" name="email" placeholder="Digite seu e-mail...">
+                    </div>
+                    <div class="input-box">
+                        <label for="cel">Celular:</label>
+                        <input type="text" id="cel" name="cel" placeholder="Digite seu celular...">
+                    </div>
+                    <div class="input-box">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="password" name="password" placeholder="Digite uma senha...">
+                    </div>
+                    <div class="input-box">
+                        <label for="empresa">Onde você trabalha:</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa...">
+                    </div>
+            </div>
+                <div class="cadasto">
+                    <button onclick="cadastrarUsuario()">Se Cadastrar</button>
+                </div>
+            <div class="login">
+                <h2>Já tem conta?</h2>
+                <button><a href="login.html">Fazer login</a></button>
+            </div>
         </div>
-    </div>
 
+        <script>
+            function cadastrarUsuario() {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const cel = document.getElementById('cel').value;
+                const password = document.getElementById('password').value;
+                const empresa = document.getElementById('empresa').value;
+    
+                if (!name || !email || !cel || !password || !empresa) {
+                    alert('Por favor, preencha todos os campos.');
+                    return;
+                }
+
+                if (password.length < 8) {
+                alert('A senha deve ter no mínimo 8 caracteres.');
+                return;
+                }
+    
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+    
+                const userExists = users.some(user => user.email === email);
+                if (userExists) {
+                    alert('Usuário já cadastrado com este email, faça login.');
+                    return;
+                }
+    
+                const newUser = { name, email, cel, password, empresa };
+                users.push(newUser);
+                localStorage.setItem('users', JSON.stringify(users));
+    
+                alert('Cadastro realizado com sucesso!');
+                window.location.href = 'login.html'
+            }
+        </script>
 </body>
-
 </html>
