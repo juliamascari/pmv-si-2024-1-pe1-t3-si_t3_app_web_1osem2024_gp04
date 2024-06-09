@@ -28,7 +28,7 @@ Comente sobre as ferramentas de testes utilizadas.
 | TF - 003 | Cadastro | Usúario cria uma senha com menos de 8 caracteres. | É apresentado um ALERT com o erro cometido, ele precisa tentar uma senha maior. |
 | TF - 004 | Cadastro | Usúario tenta se cadastrar com um email já cadastrado. | É apresentado um ALERT com o erro cometido e orientando, ele precisa tentar outro email. |
 | TF - 005 | Cadastro | Usúario já é cadastrado e deseja ir para página de Login | Clica em "Fazer Login" e é direcionado para a página de Login. |
-| TF - 006 | Login | Usúario preenche todos os campos corretamente. | Clica em "Entrar" e é direcionado para a página da Home. |
+| TF - 006 | Login | Usúario preenche todos os campos corretamente. | Clica em "Entrar" e é direcionado para a página de Login. |
 | TF - 007 | Login | Usúario não preenche todos os campos e tenta fazer login. | É apresentado um ALERT com o erro cometido, ele precisa preencher os dois campos. |
 | TF - 008 | Login | Usúario preenche os campos com email não cadastrado ainda. | É apresentado um ALERT com o erro cometido, ele precisa se cadastrar antes de fazer login. |
 | TF - 009 | Login | Usúario preenche corretamente o email mas a senha não. | É apresentado um ALERT com o erro cometido, ele precisa tentar novamente. |
