@@ -1,0 +1,192 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.menu {
+  background-color: #2d72d2; /* Cor de fundo do menu */
+  /* width: 250px; Largura do menu */
+  height: 98vh; /* Altura do menu */
+  border-radius: 10px;
+  margin: 10px 0 10px 0;
+  width: calc(20vw);
+  padding-top: 20px; /*Espaçamento superior*/
+  color: white; /* Cor do texto */
+  position: fixed; /* Fixar o menu à esquerda */
+  top: 0; /* Posicionar o menu na parte superior */
+  left: 0; /* Posicionar o menu à esquerda */
+}
+
+.menu ul {
+  list-style-type: none; /* Remover marcadores */
+  padding: 0; /* Remover espaçamento interno */
+  margin: 0; /* Remover espaçamento externo */
+}
+
+.menu ul li {
+  margin-bottom: 10px; /* Espaçamento inferior entre itens */
+}
+
+.menu ul li a {
+  text-decoration: none; /* Remover sublinhado */
+  color: #fff; /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte */
+  display: block; /* Faz com que o link ocupe toda a largura */
+  padding: 10px 20px; /* Espaçamento interno */
+}
+
+.menu ul li a:hover {
+  background-color: #25507a; /* Cor de fundo ao passar o mouse */
+}
+
+.content {
+  padding: 20px;
+  margin-left: 22%; /* Espaço para o menu */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Inicio correcao */
+
+.sidebar {
+  background-color: #2d72d2;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.logo {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px; /* Reduzido para evitar overflow em telas menores */
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+h2 {
+  font-family: 'Brush Script MT', sans-serif;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.items-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-weight: bold;
+  width: 100%;
+}
+
+.items-menu p {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.items-menu p a {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.items-menu p a:hover {
+  background-color: #1b5cb8;
+  border-radius: 0 10px 10px 0;
+}
+
+a.active {
+  background-color: #c5d5f8;
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* fim correcao  */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button-conteiner {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#calendar {
+  background-color: #fff; /* Cor de fundo do calendário */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin-top: 20px; /* Espaçamento superior */
+  height: 600px; /* Ajuste a altura do calendário */
+  overflow-y: auto;
+}
+
+.reservation-info {
+  position: right; /* Fixar o bloco de informações */
+  top: 20px; /* Posicionar o bloco na parte superior */
+  right: 20px; /* Posicionar o bloco à direita */
+  width: 30%; /* Largura do bloco de informações */
+}
+
+#full-day, #morning, #afternoon, #reset, #submit {
+  margin-bottom: 10px;
+}
+
+#full-day, #morning, #afternoon {
+  background-color: #007bff; /* Cor de fundo do botão azul */
+  border-color: #007bff; /* Cor da borda do botão azul */
+  color: white; /* Cor do texto do botão azul */
+}
+
+#reset {
+  background-color: #6c757d; /* Cor de fundo do botão cinza */
+  border-color: #6c757d; /* Cor da borda do botão cinza */
+  color: white; /* Cor do texto do botão cinza */
+}
+
+#submit {
+  background-color: #28a745; /* Cor de fundo do botão verde */
+  border-color: #28a745; /* Cor da borda do botão verde */
+  color: white; /* Cor do texto do botão verde */
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 20px;
+}
