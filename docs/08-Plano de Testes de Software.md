@@ -22,7 +22,7 @@ Comente sobre as ferramentas de testes utilizadas.
 ### Resultados Esperados
 
 | Nº Teste | Página | Cenário de Teste | Resultado |
-|------ ---|--------|------------------|-----------|
+|----------|----------|------------------------------------------------|---------------------------------------------------------------------|
 | TF - 001 | Cadastro | Usúario preenche todos os campos corretamente. | O cadastro é bem sucedido e ele é direcionado para página de Login. |
 | TF - 002 | Cadastro | Usúario não preenche todos os campos e tenta se cadastrar. | É apresentado um ALERT com o erro cometido, ele precisa preencher os cinco campos.  |
 | TF - 003 | Cadastro | Usúario cria uma senha com menos de 8 caracteres. | É apresentado um ALERT com o erro cometido, ele precisa tentar uma senha maior. |
