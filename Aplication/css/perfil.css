@@ -22,24 +22,30 @@ body {
 
 }
 
-#upload{
+#upload {
     display: none;
 }
 
 
-.foto{
-  
-margin-left: 75px;
- color: white;
- font-weight: 550;
+.foto {
+
+    margin-left: 20%;
+    color: white;
+    margin-bottom: auto;
+
+}
+
+.foto :hover {
+    background-color: #9ECBF2;
+    border-radius: 5px 5px 5px 5px;
+    color: black;
 
 
 }
 
-.foto :hover{
-    background-color: #9ECBF2;
-    border-radius: 5px 5px 5px 5px;
-    color: black;
+.profile-image:hover {
+    border-color: #9ECBF2;
+    border-style: double;
 
 }
 
@@ -52,26 +58,26 @@ margin-left: 75px;
 
 }
 
-#perfil {
-   margin-bottom: 40%;
-   margin-left: 15%;
-}
 
 #logo {
     margin-top: 2%;
+    width: 250px;
+    height: 250px;
 }
 
 .sair {
-    margin-left: 0%;
-    text-align: left;
     border: none;
     font-size: 3vh;
     font-weight: 550;
     color: white;
-    margin-bottom: 5vh;
     margin-left: 5%;
+    margin-bottom: 10%;
+}
 
-
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 #editar {
@@ -83,7 +89,7 @@ margin-left: 75px;
     background-color: #3A75D6;
     border-radius: 15px;
     position: fixed;
-   margin-left:5%;
+    margin-left: 5%;
     bottom: 30px;
 }
 
@@ -96,14 +102,14 @@ margin-left: 75px;
     background-color: #3A75D6;
     border-radius: 15px;
     position: fixed;
-    margin-left:60%;
+    margin-left: 60%;
     bottom: 30px;
 }
 
 #editar:hover {
     background-color: #9ECBF2;
     color: black;
-    
+
 }
 
 #salvar:hover {
@@ -117,7 +123,7 @@ margin-left: 75px;
     border-radius: 0 15px 15px 0;
 }
 
-#login:hover {
+#agendamento:hover {
     color: black;
 }
 
@@ -130,7 +136,7 @@ label {
 
 input {
     padding: 1vh;
-    
+
 
 }
 
@@ -148,7 +154,7 @@ form {
     width: 90%;
 }
 
-#login{
-        text-decoration: none;
-       color:white;
+#agendamento {
+    text-decoration: none;
+    color: white;
 }
