@@ -39,6 +39,19 @@ Comente sobre as ferramentas de testes utilizadas.
 | TF - 014 | Perfil | Usúario clica no botão sair. | Usuário é redirecionado a página de agendamento. |
 | TF - 015 | Perfil | Usúario cria uma senha com menos de 8 caracteres. |É apresentado um ALERT com o erro cometido, ele precisa tentar uma senha maior. |
 | TF - 016 | Perfil | Usúario tenta se cadastrar com um email sem "@". | É apresentado um ALERT com o erro cometido e orientando, ele precisa inserir um email válido. |
+| TF - 017 | Agendamento | Usuário seleciona uma cidade, prédio, andar, dia e turno corretamente. | O agendamento é bem sucedido e uma mensagem de confirmação é exibida. |
+| TF - 018 | Agendamento | Usuário não seleciona uma cidade e tenta agendar. | É apresentado um ALERT informando que a cidade é obrigatória. |
+| TF - 019 | Agendamento | Usuário não seleciona um prédio e tenta agendar. | É apresentado um ALERT informando que o prédio é obrigatório. |
+| TF - 020 | Agendamento | Usuário não seleciona um andar e tenta agendar. | É apresentado um ALERT informando que o andar é obrigatório. |
+| TF - 021 | Agendamento | Usuário não seleciona um dia e tenta agendar. | É apresentado um ALERT informando que o dia é obrigatório. |
+| TF - 022 | Agendamento | Usuário não seleciona um turno e tenta agendar. | É apresentado um ALERT informando que o turno é obrigatório. |
+| TF - 023 | Reservas | Usuário aplica filtros de cidade, prédio, andar, dia e turno corretamente. | As reservas filtradas são exibidas corretamente de acordo com os critérios aplicados. |
+| TF - 024 | Reservas | Usuário aplica filtro apenas por cidade. | As reservas da cidade selecionada são exibidas. |
+| TF - 025 | Reservas | Usuário aplica filtro por cidade e prédio. | As reservas do prédio na cidade selecionada são exibidas. |
+| TF - 026 | Reservas | Usuário aplica filtro por cidade, prédio e andar. | As reservas do andar no prédio e cidade selecionados são exibidas. |
+| TF - 027 | Reservas | Usuário aplica filtro por cidade, prédio, andar e dia. | As reservas do dia no andar, prédio e cidade selecionados são exibidas. |
+| TF - 028 | Reservas | Usuário aplica filtro por cidade, prédio, andar, dia e turno. | As reservas do turno no dia, andar, prédio e cidade selecionados são exibidas. |
+| TF - 029 | Reservas | Usuário aplica filtro sem selecionar nenhum critério. | Todas as reservas são exibidas. |
 
 
 
