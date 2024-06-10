@@ -96,7 +96,6 @@ body {
     border: none;
     box-shadow: 1px 1px 6px #0000001c;
     font-size: 0.9rem;
-    border-radius: 5px;
 }
 
 .input-box input:hover {
@@ -121,8 +120,6 @@ body {
     font-family:"Poppins", sans-serif;
     font-size: 100%;
     margin-top: 10%;
-    border-radius: 7px;
-    cursor: pointer;
 }
 
 .input-group button:hover {
@@ -161,7 +158,6 @@ body {
     padding: 0.60rem;
     font-family:"Poppins", sans-serif;
     font-size: 100%;
-    border-radius: 7px;
 }
 
 .cadastro button:hover {

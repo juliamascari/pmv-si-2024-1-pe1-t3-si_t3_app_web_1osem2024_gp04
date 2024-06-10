@@ -65,6 +65,8 @@ body {
   display: flex;
   gap: 15px;
   margin-bottom: 20px; /* Reduzido para evitar overflow em telas menores */
+  /* Adicionado */
+  padding-left: 20%;
 }
 
 .logo img {
