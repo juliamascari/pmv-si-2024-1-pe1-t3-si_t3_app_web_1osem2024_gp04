@@ -15,10 +15,13 @@ body {
     margin: 10px 0 10px 0;
     width: calc(20vw);
     height: calc(100vh - 20px);
-    background-color: #3A75D6;
+    background-color: #2d72d2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* Nova linha */
+    align-items: center;
+    
 
 }
 
@@ -29,7 +32,8 @@ body {
 
 .foto {
 
-    margin-left: 20%;
+    /* margin-left: 20%; removido para alinhar nova combinacao ao*/
+    margin-top: 30vh; /*Adicionado para centralizar*/
     color: white;
     margin-bottom: auto;
 
@@ -59,11 +63,36 @@ body {
 }
 
 
+/* OLD LOGO 
+
 #logo {
     margin-top: 2%;
     width: 250px;
     height: 250px;
+} */
+
+/* Novo */
+.logo {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px; /* Reduzido para evitar overflow em telas menores */
+    margin-top: 20px; /* Reduzido para evitar overflow em telas menores */
 }
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+h2 {
+    font-family: 'Brush Script MT', sans-serif;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* fim novo */
 
 .sair {
     border: none;
@@ -86,7 +115,7 @@ body {
     border: none;
     color: white;
     padding: 10px;
-    background-color: #3A75D6;
+    background-color: #2d72d2;
     border-radius: 15px;
     position: fixed;
     margin-left: 5%;
@@ -99,7 +128,7 @@ body {
     border: none;
     color: white;
     padding: 10px;
-    background-color: #3A75D6;
+    background-color: #2d72d2;
     border-radius: 15px;
     position: fixed;
     margin-left: 60%;
