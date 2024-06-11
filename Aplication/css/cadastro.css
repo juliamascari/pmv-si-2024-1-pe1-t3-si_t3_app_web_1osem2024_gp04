@@ -108,14 +108,12 @@ body {
 }
 
 .cadastro button {
-    width: 140%;
     border: 1px solid #000000;
     background-color: #9ECBF2;
     padding: 0.70rem;
     font-family:"Poppins", sans-serif;
     font-size: 90%;
     border-radius: 8px;
-    margin: 10% 0;
     cursor: pointer;
 }
 
@@ -182,6 +180,7 @@ body {
 
     .cadastro {
         width: 100%;
+        font-size: 100%;
     }
 
     .selo {
