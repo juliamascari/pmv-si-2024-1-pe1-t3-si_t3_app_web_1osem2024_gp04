@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="cadastro.css">
     <title>Cadastro - OpenSchedule</title>
 </head>
 <body>
     <div class="container">
-        <img class= "cadastro-img" src="../images/cadastro.jpg" alt="imagem login">
+        <img class= "cadastro-img" src="img/cadastro.jpg" alt="imagem login">
         <div class="cadastro">
             <div class="titulo">
                 <h1>Fazer Cadastro</h1>
@@ -38,7 +38,7 @@
                         <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa...">
                     </div>
             </div>
-                <div class="cadasto">
+                <div class="cadastro">
                     <button onclick="cadastrarUsuario()">Se Cadastrar</button>
                 </div>
             <div class="login">
@@ -58,6 +58,11 @@
                 if (!name || !email || !cel || !password || !empresa) {
                     alert('Por favor, preencha todos os campos.');
                     return;
+                }
+
+                if (password.length < 7) {
+                alert('A senha deve ter no mínimo 8 caracteres.');
+                return;
                 }
     
                 const users = JSON.parse(localStorage.getItem('users')) || [];
