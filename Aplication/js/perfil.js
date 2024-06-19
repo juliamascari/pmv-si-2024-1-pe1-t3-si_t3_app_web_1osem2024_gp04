@@ -7,6 +7,9 @@
         const buttonEditar = document.querySelector("#editar");
         const buttonSalvar = document.querySelector("#salvar");
 
+        let originalEmail = '';
+        let originalPassword = '';
+
         function carregarDadosUsuario() {
             const dadosUsuarioJSON = localStorage.getItem('dadosUsuario');
             if (dadosUsuarioJSON) {
@@ -14,6 +17,9 @@
                 inputName.value = dadosUsuario.name || 'nome';
                 inputEmail.value = dadosUsuario.email || '';
                 inputTel.value = dadosUsuario.cel || ''; // ajuste para telefone/celular
+                inputPassword.value = dadosUsuario.password || ''; // carregar senha
+                originalEmail = dadosUsuario.email;
+                originalPassword = dadosUsuario.password;
             }
         }
 
@@ -60,9 +66,19 @@
             const dadosUsuario = {
                 name: inputName.value,
                 email: inputEmail.value,
-                cel: inputTel.value // ajuste para telefone/celular
+                cel: inputTel.value, // ajuste para telefone/celular
+                password: inputPassword.value // adicionando senha
             };
+
             localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
+
+            // Atualiza a lista de usuários
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const updatedUsers = users.map(user => 
+                user.email === originalEmail ? dadosUsuario : user
+            );
+            localStorage.setItem('users', JSON.stringify(updatedUsers));
+
             alert("Dados salvos com sucesso!");
 
             inputName.disabled = true;
@@ -70,11 +86,26 @@
             inputTel.disabled = true;
             inputPassword.disabled = true;
             buttonSalvar.disabled = true;
+        });
 
-        });       
+
+
+
+        function formatPhoneNumber(value) {
+            if (!value) return value;
+            const phoneNumber = value.replace(/[^\d]/g, "");
+            const phoneNumberLength = phoneNumber.length;
+            if (phoneNumberLength < 3) return phoneNumber;
+            if (phoneNumberLength < 8) {
+                return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2)}`;
+            }
+            return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 7)}-${phoneNumber.slice(7, 11)}`;
+        }
+
+        function handlePhoneInput(event) {
+            event.target.value = formatPhoneNumber(event.target.value);
+        }
+
+        inputTel.addEventListener("input", handlePhoneInput);
 
     });
-
-
-
-   
