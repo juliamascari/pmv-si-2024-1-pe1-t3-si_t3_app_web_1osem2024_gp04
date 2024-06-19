@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
     <title>Cadastro - OpenSchedule</title>
 </head>
 <body>
     <div class="container">
-        <img class= "cadastro-img" src="img/cadastro.jpg" alt="imagem login">
+        <img class= "cadastro-img" src="../images/cadastro.jpg" alt="imagem login">
         <div class="cadastro">
             <div class="titulo">
                 <h1>Fazer Cadastro</h1>
@@ -27,11 +27,11 @@
                     </div>
                     <div class="input-box">
                         <label for="cel">Celular:</label>
-                        <input type="text" id="cel" name="cel" placeholder="Digite seu celular...">
+                        <input type="text" id="cel" name="cel" placeholder="Digite seu celular..." maxlength="11" minlength="11">
                     </div>
                     <div class="input-box">
                         <label for="senha">Senha:</label>
-                        <input type="password" id="password" name="password" placeholder="Digite uma senha...">
+                        <input type="password" id="password" name="password" placeholder="Digite uma senha..." minlength="8">
                     </div>
                     <div class="input-box">
                         <label for="empresa">Onde você trabalha:</label>
@@ -48,38 +48,81 @@
         </div>
 
         <script>
-            function cadastrarUsuario() {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const cel = document.getElementById('cel').value;
-                const password = document.getElementById('password').value;
-                const empresa = document.getElementById('empresa').value;
+            // function cadastrarUsuario() {
+            //     const name = document.getElementById('name').value;
+            //     const email = document.getElementById('email').value;
+            //     const cel = document.getElementById('cel').value;
+            //     const password = document.getElementById('password').value;
+            //     const empresa = document.getElementById('empresa').value;
     
-                if (!name || !email || !cel || !password || !empresa) {
-                    alert('Por favor, preencha todos os campos.');
-                    return;
-                }
+            //     if (!name || !email || !cel || !password || !empresa) {
+            //         alert('Por favor, preencha todos os campos.');
+            //         return;
+            //     }
 
-                if (password.length < 7) {
-                alert('A senha deve ter no mínimo 8 caracteres.');
-                return;
-                }
+            //     if (password.length < 7) {
+            //     alert('A senha deve ter no mínimo 8 caracteres.');
+            //     return;
+            //     }
     
-                const users = JSON.parse(localStorage.getItem('users')) || [];
+            //     const users = JSON.parse(localStorage.getItem('users')) || [];
     
-                const userExists = users.some(user => user.email === email);
-                if (userExists) {
-                    alert('Usuário já cadastrado com este email, faça login.');
-                    return;
-                }
+            //     const userExists = users.some(user => user.email === email);
+            //     if (userExists) {
+            //         alert('Usuário já cadastrado com este email, faça login.');
+            //         return;
+            //     }
     
-                const newUser = { name, email, cel, password, empresa };
-                users.push(newUser);
-                localStorage.setItem('users', JSON.stringify(users));
+            //     const newUser = { name, email, cel, password, empresa };
+            //     users.push(newUser);
+            //     localStorage.setItem('users', JSON.stringify(users));
     
-                alert('Cadastro realizado com sucesso!');
-                window.location.href = 'login.html'
-            }
+            //     alert('Cadastro realizado com sucesso!');
+            //     window.location.href = 'login.html'
+            // }
+
+
+         
+
+           
+    function cadastrarUsuario() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const cel = document.getElementById('cel').value;
+        const password = document.getElementById('password').value;
+        const empresa = document.getElementById('empresa').value;
+
+        if (!name || !email || !cel || !password || !empresa) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        if (password.length < 8) {
+            alert('A senha deve ter no mínimo 8 caracteres.');
+            return;
+        }
+
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        const userExists = users.some(user => user.email === email);
+        if (userExists) {
+            alert('Usuário já cadastrado com este email, faça login.');
+            return;
+        }
+
+        const newUser = { name, email, cel, password, empresa };
+        users.push(newUser);
+        localStorage.setItem('users', JSON.stringify(users));
+
+        localStorage.setItem('dadosUsuario', JSON.stringify(newUser));
+
+        alert('Cadastro realizado com sucesso!');
+        window.location.href = 'login.html';
+    }
+
+   
         </script>
 </body>
 </html>
+
+
