@@ -82,160 +82,150 @@
             // }
 
 
+            function cadastrarUsuario() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const cel = document.getElementById('cel').value;
+    const password = document.getElementById('password').value;
+    const empresa = document.getElementById('empresa').value;
 
-
-    function cadastrarUsuario() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const cel = document.getElementById('cel').value;
-        const password = document.getElementById('password').value;
-        const empresa = document.getElementById('empresa').value;
-
-        if (!name || !email || !cel || !password || !empresa) {
-            alert('Por favor, preencha todos os campos.');
-            return;
-        }
-
-        if (password.length < 8) {
-            alert('A senha deve ter no mínimo 8 caracteres.');
-            return;
-        }
-
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-
-        const userExists = users.some(user => user.email === email);
-        if (userExists) {
-            alert('Usuário já cadastrado com este email, faça login.');
-            return;
-          
-        }
-        if (!inputEmail.value.includes('@')) {
-                alert("Por favor, insira um email válido.");
-                return;
-            }
-
-
-        const newUser = { name, email, cel, password, empresa };
-        users.push(newUser);
-        localStorage.setItem('users', JSON.stringify(users));
-
-        localStorage.setItem('dadosUsuario', JSON.stringify(newUser));
-
-        alert('Cadastro realizado com sucesso!');
-        window.location.href = 'login.html';
+    if (!name || !email || !cel || !password || !empresa) {
+        alert('Por favor, preencha todos os campos.');
+        return;
     }
 
-    
+    if (!email.includes('@')) {
+        alert("Por favor, insira um email válido.");
+        return;
+    }
 
-   document.addEventListener("DOMContentLoaded", function () {
-            const inputName = document.querySelector("#nome");
-            const inputEmail = document.querySelector("#email");
-            const inputTel = document.querySelector("#telefone");
-            const inputPassword = document.querySelector("#senha");
-            const buttonEditar = document.querySelector("#editar");
-            const buttonSalvar = document.querySelector("#salvar");
+    if (password.length < 8) {
+        alert('A senha deve ter no mínimo 8 caracteres.');
+        return;
+    }
 
-            let originalEmail = '';
+    const users = JSON.parse(localStorage.getItem('users')) || [];
 
-            function carregarDadosUsuario() {
-                const dadosUsuarioJSON = localStorage.getItem('dadosUsuario');
-                if (dadosUsuarioJSON) {
-                    const dadosUsuario = JSON.parse(dadosUsuarioJSON);
-                    inputName.value = dadosUsuario.name || 'nome';
-                    inputEmail.value = dadosUsuario.email || '';
-                    inputTel.value = dadosUsuario.cel || ''; // ajuste para telefone/celular
-                    originalEmail = dadosUsuario.email;
-                }
-            }
+    const userExists = users.some(user => user.email === email);
+    if (userExists) {
+        alert('Usuário já cadastrado com este email, faça login.');
+        return;
+    }
 
-            carregarDadosUsuario();
+    const newUser = { name, email, cel, password, empresa };
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
 
-            buttonEditar.addEventListener("click", function () {
-                inputName.disabled = false;
-                inputEmail.disabled = false;
-                inputTel.disabled = false;
-                inputPassword.disabled = false;
-                buttonSalvar.disabled = false;
-            });
+    localStorage.setItem('dadosUsuario', JSON.stringify(newUser));
 
-            document.getElementById('upload').addEventListener('change', function (event) {
-                const file = event.target.files[0];
-                const reader = new FileReader();
+    alert('Cadastro realizado com sucesso!');
+    window.location.href = 'login.html';
+}
 
-                reader.onload = function (e) {
-                    localStorage.setItem('imagemSalva', e.target.result);
-                    document.getElementById('picture_img').src = e.target.result;
-                };
+document.addEventListener("DOMContentLoaded", function () {
+    const inputName = document.getElementById('name');
+    const inputEmail = document.getElementById('email');
+    const inputTel = document.getElementById('cel');
+    const inputPassword = document.getElementById('password');
+    const buttonEditar = document.getElementById('editar');
+    const buttonSalvar = document.getElementById('salvar');
 
-                reader.readAsDataURL(file);
-            });
+    let originalEmail = '';
 
-            const imagemSalva = localStorage.getItem('imagemSalva');
-            if (imagemSalva) {
-                document.getElementById('picture_img').src = imagemSalva;
-            }
+    function carregarDadosUsuario() {
+        const dadosUsuarioJSON = localStorage.getItem('dadosUsuario');
+        if (dadosUsuarioJSON) {
+            const dadosUsuario = JSON.parse(dadosUsuarioJSON);
+            inputName.value = dadosUsuario.name || '';
+            inputEmail.value = dadosUsuario.email || '';
+            inputTel.value = dadosUsuario.cel || '';
+            originalEmail = dadosUsuario.email;
+        }
+    }
 
-            buttonSalvar.addEventListener("click", function (event) {
-                event.preventDefault();
+    carregarDadosUsuario();
 
-                if (!inputEmail.value.includes('@')) {
-                    alert("Por favor, insira um email válido.");
-                    return;
-                }
+    buttonEditar.addEventListener("click", function () {
+        inputName.disabled = false;
+        inputEmail.disabled = false;
+        inputTel.disabled = false;
+        inputPassword.disabled = false;
+        buttonSalvar.disabled = false;
+    });
 
-                if (inputPassword.value.length < 8) {
-                    alert("Por favor, insira uma senha válida com pelo menos 8 caracteres.");
-                    return;
-                }
+    document.getElementById('upload').addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
 
-                const dadosUsuario = {
-                    name: inputName.value,
-                    email: inputEmail.value,
-                    cel: inputTel.value, // ajuste para telefone/celular
-                    password: inputPassword.value // adicionando senha
-                };
+        reader.onload = function (e) {
+            localStorage.setItem('imagemSalva', e.target.result);
+            document.getElementById('picture_img').src = e.target.result;
+        };
 
-                localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
+        reader.readAsDataURL(file);
+    });
 
-                // Atualiza a lista de usuários
-                const users = JSON.parse(localStorage.getItem('users')) || [];
-                const updatedUsers = users.map(user => 
-                    user.email === originalEmail ? dadosUsuario : user
-                );
-                localStorage.setItem('users', JSON.stringify(updatedUsers));
+    const imagemSalva = localStorage.getItem('imagemSalva');
+    if (imagemSalva) {
+        document.getElementById('picture_img').src = imagemSalva;
+    }
 
-                alert("Dados salvos com sucesso!");
+    buttonSalvar.addEventListener("click", function (event) {
+        event.preventDefault();
 
-                inputName.disabled = true;
-                inputEmail.disabled = true;
-                inputTel.disabled = true;
-                inputPassword.disabled = true;
-                buttonSalvar.disabled = true;
-
-                window.location.href = 'login.html';
-
-
-                function formatPhoneNumber(value) {
-            if (!value) return value;
-            const phoneNumber = value.replace(/[^\d]/g, "");
-            const phoneNumberLength = phoneNumber.length;
-            if (phoneNumberLength < 3) return phoneNumber;
-            if (phoneNumberLength < 8) {
-                return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2)}`;
-            }
-            return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 7)}-${phoneNumber.slice(7, 11)}`;
+        if (!inputEmail.value.includes('@')) {
+            alert("Por favor, insira um email válido.");
+            return;
         }
 
-        function handlePhoneInput(event) {
-            event.target.value = formatPhoneNumber(event.target.value);
+        if (inputPassword.value.length < 8) {
+            alert("Por favor, insira uma senha válida com pelo menos 8 caracteres.");
+            return;
         }
 
-        inputTel.addEventListener("input", handlePhoneInput);
-    
-            });
-        });
-        </script>
+        const dadosUsuario = {
+            name: inputName.value,
+            email: inputEmail.value,
+            cel: inputTel.value,
+            password: inputPassword.value
+        };
+
+        localStorage.setItem('dadosUsuario', JSON.stringify(dadosUsuario));
+
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const updatedUsers = users.map(user => 
+            user.email === originalEmail ? dadosUsuario : user
+        );
+        localStorage.setItem('users', JSON.stringify(updatedUsers));
+
+        alert("Dados salvos com sucesso!");
+
+        inputName.disabled = true;
+        inputEmail.disabled = true;
+        inputTel.disabled = true;
+        inputPassword.disabled = true;
+        buttonSalvar.disabled = true;
+
+        window.location.href = 'login.html';
+    });
+
+    function formatPhoneNumber(value) {
+        if (!value) return value;
+        const phoneNumber = value.replace(/[^\d]/g, "");
+        const phoneNumberLength = phoneNumber.length;
+        if (phoneNumberLength < 3) return phoneNumber;
+        if (phoneNumberLength < 8) {
+            return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2)}`;
+        }
+        return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 7)}-${phoneNumber.slice(7, 11)}`;
+    }
+
+    function handlePhoneInput(event) {
+        event.target.value = formatPhoneNumber(event.target.value);
+    }
+
+    inputTel.addEventListener("input", handlePhoneInput);
+});
+</script>
 </body>
 </html>
-
-
