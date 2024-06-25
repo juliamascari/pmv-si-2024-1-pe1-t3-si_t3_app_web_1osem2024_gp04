@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="css/reservas.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Open Schedule">
+                <h2>Open Schedule</h2>
+            </div>
+            <nav class="items-menu">
+                <p><a href="home.html">Home</a></p>
+                <p><a href="agendamento.html">Agendamento</a></p>
+                <p><a href="reservas.html" class="active">Reservas</a></p>
+                <p><a href="perfil.html" >Meu perfil</a></p>
+                <p><a href="login.html">Desconectar</a></p>
+            </nav>
+        </div>
+
+        <main>
+            <h1>Minhas reservas</h1>
+            <div class="filtro">
+                <div class="filtro-item">
+                    <label for="data">Data Escolhida:</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <div class="filtro-item">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+                <div class="filtro-item">
+                    <label for="predio">Prédio:</label>
+                    <input type="text" id="predio" name="predio">
+                </div>
+                <div class="filtro-item">
+                    <label for="andar">Andar:</label>
+                    <input type="number" id="andar" name="andar">
+                </div>
+                <div class="filtro-item">
+                    <label for="area">Área:</label>
+                    <input type="text" id="area" name="area">
+                </div>
+                <button onclick="filtrarReservas()">Filtrar</button>
+            </div>
+    
+            <table id="tabelaReservas">
+                <thead>
+                    <tr>
+                        <th>Data Escolhida</th>
+                        <th>Cidade</th>
+                        <th>Prédio</th>
+                        <th>Andar</th>
+                        <th>Área</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </main>
+
+        <script src="js/reservas.js"></script>
+</body>
+
+</html>
