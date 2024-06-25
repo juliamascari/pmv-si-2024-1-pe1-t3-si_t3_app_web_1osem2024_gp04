@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.side-menu {
+
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    width: calc(20vw);
+    height: calc(100vh - 20px);
+    background-color: #2d72d2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Nova linha */
+    align-items: center;
+    
+
+}
+
+#upload {
+    display: none;
+}
+
+
+.foto {
+
+    /* margin-left: 20%; removido para alinhar nova combinacao ao*/
+    margin-top: 30vh; /*Adicionado para centralizar*/
+    color: white;
+    margin-bottom: auto;
+
+}
+
+.foto :hover {
+    background-color: #9ECBF2;
+    border-radius: 5px 5px 5px 5px;
+    color: black;
+
+
+}
+
+.profile-image:hover {
+    border-color: #9ECBF2;
+    border-style: double;
+
+}
+
+.content {
+    border-radius: 10px;
+    margin: 10px;
+    width: calc(80vw);
+    height: calc(100vh - 20px);
+    background-color: #EBEDF3;
+
+}
+
+
+/* OLD LOGO 
+
+#logo {
+    margin-top: 2%;
+    width: 250px;
+    height: 250px;
+} */
+
+/* Novo */
+.logo {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px; /* Reduzido para evitar overflow em telas menores */
+    margin-top: 20px; /* Reduzido para evitar overflow em telas menores */
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+h2 {
+    font-family: 'Brush Script MT', sans-serif;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* fim novo */
+
+.sair {
+    border: none;
+    font-size: 3vh;
+    font-weight: 550;
+    color: white;
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#editar {
+    margin-left: 10vh;
+    width: 20vh;
+    border: none;
+    color: white;
+    padding: 10px;
+    background-color: #2d72d2;
+    border-radius: 15px;
+    position: fixed;
+    margin-left: 5%;
+    bottom: 30px;
+}
+
+#salvar {
+    display: none;
+       margin-left: 10vh;
+    width: 20vh;
+    border: none;
+    color: white;
+    padding: 10px;
+    background-color: #2d72d2;
+    border-radius: 15px;
+    position: fixed;
+    margin-left: 60%;
+    bottom: 30px;
+}
+
+#delete {
+   display: none;
+    margin-left: 10vh;
+    width: 20vh;
+    border: none;
+    color: white;
+    padding: 10px;
+    background-color: #2d72d2;
+    border-radius: 15px;
+    position: fixed;
+    margin-left: 30%;
+    bottom: 30px;
+}
+
+
+#editar:hover {
+    background-color: #9ECBF2;
+    color: black;
+
+}
+
+#salvar:hover {
+    background-color: #9ECBF2;
+    color: black;
+}
+
+
+.sair:hover {
+    background-color: #9ECBF2;
+    border-radius: 0 15px 15px 0;
+}
+
+#agendamento:hover {
+    color: black;
+}
+
+
+label {
+    margin-top: 20px;
+    color: black;
+
+}
+
+input {
+    padding: 1vh;
+
+
+}
+
+select {
+    padding: 1vh;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+    border-radius: 15px;
+    padding: 50px;
+    width: 90%;
+}
+
+#agendamento {
+    text-decoration: none;
+    color: white;
+}

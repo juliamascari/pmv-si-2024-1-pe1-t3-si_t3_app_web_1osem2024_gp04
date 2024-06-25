@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil</title>
+    <link rel="stylesheet" type="text/css" href="css/perfil.css">
+    <script type="text/javascript" src="js/perfil.js"></script>
+</head>
+
+<body>
+    <div class="side-menu">
+        <!-- <img src="../images/logo.png" alt="logo" class="logo"> -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Open Schedule">
+            <h2>Open Schedule</h2>
+        </div>
+        <label class="foto">
+            <input type="file" accept="Image/*" id="upload">
+            <img id="picture_img" class="profile-image" src="images/profile_menu_icon_149887.png"
+                alt="Enviar foto">
+        </label>
+        <nav class="sair">
+            <a href="agendamento.html" id="agendamento">Sair</a>
+        </nav>
+    </div>
+    <div class="content">
+        <button id="editar">Editar perfil</button>
+        <button type="submit" id="delete" > Excluir perfil</button>
+        <form action="formulario">
+            <label for="name">Nome</label>
+            <input type="text" id="nome" disabled>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" disabled>
+            <label for="tel">Telefone</label>
+            <input type="tel" id="telefone"maxlength="15" minlength="11" disabled>
+            <label for="password">Senha</label>
+            <input type="password" id="senha" maxlength="8" minlength="4" disabled>
+            <button type="submit" id="salvar" >Salvar </button>
+         
+        </form>
+    </div>
+</body>
+
+</html>

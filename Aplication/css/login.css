@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    letter-spacing: 1px;
+}
+
+body {
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #e3e5e8;
+}
+
+.container h1 {
+    margin-bottom: 15px;
+}
+
+.login-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfff8;
+}
+
+.login-img img {
+    width: 31rem;
+}
+
+.login {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBEDF3;
+    padding: 30px;
+}
+
+.selo {
+    background-image: url('img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5rem;
+    height: 4.5rem;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    }
+
+.login h1 {
+    font-size: 2.5rem;
+    border-bottom: #000000;
+    font-family:"Poppins", sans-serif;
+}
+
+.login h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #000000;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    align-items: center;
+    margin-top: 3%;
+    font-family:"Poppins", sans-serif;
+}
+
+.input-box label {
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+    cursor: auto;
+}
+
+.input-box input {
+    background-color: #fff;
+    width: 110%;
+    margin: 0.6rem 0;
+    padding: 0.6rem 3rem;
+    border: none;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.9rem;
+}
+
+.input-box input:hover {
+    background-color: #cfe6fa;
+}
+
+.input-box ::placeholder {
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+.input-box {
+    margin: 0.7rem;
+}
+
+.input-group button {
+    width: 50%;
+    margin: 1rem;
+    border: 1px solid #000000;
+    background-color: #9ECBF2;
+    padding: 0.60rem;
+    font-family:"Poppins", sans-serif;
+    font-size: 100%;
+    margin-top: 10%;
+}
+
+.input-group button:hover {
+    background-color: #ffffff;
+}   
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #e3e5e8;
+    margin: 3%;
+}
+
+.cadastro h2 {
+    font-family:"Poppins", sans-serif;
+    font-size: 2rem;
+}
+
+.cadastro h2::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #000000;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.cadastro button {
+    width: 50%;
+    margin: 2.5rem;
+    border: 1px solid #000000;
+    background-color: #9ECBF2;
+    padding: 0.60rem;
+    font-family:"Poppins", sans-serif;
+    font-size: 100%;
+}
+
+.cadastro button:hover {
+    background-color: #ffffff;
+}
+
+.input-group button a,
+.cadastro button a {
+    color: #000000;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .login-img {
+        width: 100%;
+    }
+
+    .login {
+        width: 100%;
+    }
+
+    .selo {
+        top: 20px;
+        right: 20px;
+    }
+
+    .input-box input {
+        width: 100%;
+    }
+
+    .input-group button {
+        width: 100%;
+    }
+
+    .cadastro button {
+        width: 100%;
+    }
+}

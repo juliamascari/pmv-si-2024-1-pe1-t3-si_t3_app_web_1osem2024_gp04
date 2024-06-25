@@ -1,4 +1,4 @@
-# Sistema de agendamento de vagas em escritório
+# OpenSchedule - Agendamento de Vagas para Escritório
 
 `Sistemas da informação`
 
@@ -9,12 +9,11 @@
 Está sendo desenvolvido uma aplicação web com o objetivo de realizar agendamento e gerenciamento de vagas em escritório. Este projeto tem como foco facilitar e otimizar os espações físicos de uma empresa que possui modelo híbrido de trabalho.
 
 ## Integrantes
-
-* Amanda Vitoria Garcia  
+* Amanda Vitoria Garcia
+* César Henrique de Oliveira Silva
 * Jhonatan Felipe do Nascimento
 * Júlia Persson Mascari
 * Luanna Gyovana Rodrigues da Silva
-* Renan Ribeiro Lage
 
 ## Orientador
 

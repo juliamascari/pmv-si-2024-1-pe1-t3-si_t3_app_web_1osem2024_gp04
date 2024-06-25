@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login - OpenSchedule</title>
+</head>
+
+<body>
+    <div class="container">
+        <img class= "login-img" src="images/login.jpg" alt="imagem login">
+        <div class="login">
+            <div class="titulo">
+                <h1>Fazer Login</h1>
+            </div>
+                <a href="home.html">
+                    <div class="selo"></div>
+                </a>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label id="email-label" for="email">E-mail:</label>
+                        <input type="text" id="email" name="email" placeholder="Digite seu e-mail...">
+                    </div>
+                    <div class="input-box">
+                        <label id="password-label" for="password">Senha:</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha...">
+                    </div>
+                    <button onclick="validarLogin()">Entrar</button>
+                </div>    
+            <div class="cadastro">
+                <h2>Não tem conta ainda?</h2>
+                <button><a href="cadastro.html">Se Cadastrar</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validarLogin () {
+            var emailLabel = document.getElementById('email-label');
+            var email = document.getElementById('email').value.trim().toLowerCase();
+            var passwordLabel = document.getElementById('password-label');
+            var password = document.getElementById('password').value.trim();
+            
+            if (email.trim() === '' || password.trim() === '') {
+                    emailLabel.textContent = 'E-mail:';
+                    passwordLabel.textContent = 'Senha:';
+                    alert('Por favor, preencha todos os campos.');
+                    return;
+
+            }
+            
+            var usuariosCadastrados = JSON.parse(localStorage.getItem('users')) || [];
+            
+            var usuarioEncontrado = usuariosCadastrados.find(usuario => usuario.email === email);
+            
+            if (!usuarioEncontrado) {
+                alert('Usuário não encontrado. Faça seu cadastro!');
+                return;
+            }
+    
+            if (usuarioEncontrado.password === password) {
+                emailLabel.textContent = 'E-mail:';
+                passwordLabel.textContent = 'Senha:';
+                alert('Login realizado com sucesso!');
+                window.location.href = 'home.html'
+            } else {
+                alert('Email ou senha incorretos. Tente novamente!');
+            }
+        }
+
+   
+    </script>
+
+</body>
+</html>
