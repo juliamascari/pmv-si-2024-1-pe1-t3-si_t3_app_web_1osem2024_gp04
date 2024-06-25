@@ -9,7 +9,6 @@
 Está sendo desenvolvido uma aplicação web com o objetivo de realizar agendamento e gerenciamento de vagas em escritório. Este projeto tem como foco facilitar e otimizar os espações físicos de uma empresa que possui modelo híbrido de trabalho.
 
 ## Integrantes
-
 * Amanda Vitoria Garcia
 * César Henrique de Oliveira Silva
 * Jhonatan Felipe do Nascimento
@@ -48,4 +47,4 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Apresentação
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+<li><a href="https://youtu.be/bikiSSamr5w"> Apresentação da solução</a></li>
