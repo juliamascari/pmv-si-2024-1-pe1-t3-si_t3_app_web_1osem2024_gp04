@@ -26,8 +26,8 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 # Documentação
 
 <ol>
-<li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
+<li><a href="docs/01-Documentação.md"> Documentação</a></li>
+<li><a href="docs/02-Planejamento do Projeto.md"> Planejamento do Projeto</a></li>
 <li><a href="docs/03-Relatórios e Listas.md"> Relatórios e Listas</a></li>
 <li><a href="docs/04-Sydle One.md"> Sydle One</a></li>
 
